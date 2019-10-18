@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusScheduleAPI", "BusScheduleAPI\BusScheduleAPI.csproj", "{CC07F80C-8396-4ABD-8BE0-FFF6D237769D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusScheduleLibrary", "BusScheduleLibrary\BusScheduleLibrary.csproj", "{1B0E9C56-F4D4-4F6E-A0E5-4789F946A8CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC07F80C-8396-4ABD-8BE0-FFF6D237769D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC07F80C-8396-4ABD-8BE0-FFF6D237769D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC07F80C-8396-4ABD-8BE0-FFF6D237769D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC07F80C-8396-4ABD-8BE0-FFF6D237769D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B0E9C56-F4D4-4F6E-A0E5-4789F946A8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0E9C56-F4D4-4F6E-A0E5-4789F946A8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0E9C56-F4D4-4F6E-A0E5-4789F946A8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0E9C56-F4D4-4F6E-A0E5-4789F946A8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53C1F351-093E-4D5D-B5FE-DEC9895DD9CE}
+	EndGlobalSection
+EndGlobal
