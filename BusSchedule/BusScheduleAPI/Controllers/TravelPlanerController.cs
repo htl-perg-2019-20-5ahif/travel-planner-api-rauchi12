@@ -17,17 +17,19 @@ namespace BusScheduleAPI.Controllers
     {
 
         private readonly ILogger<TravelPlanerController> _logger;
-        private static HttpClient HttpClient = new HttpClient() { BaseAddress = new Uri("https://cddataexchange.blob.core.windows.net") };
+        private readonly HttpClient _client;
 
-        public TravelPlanerController(ILogger<TravelPlanerController> logger)
+        public TravelPlanerController(ILogger<TravelPlanerController> logger, IHttpClientFactory factory)
         {
             _logger = logger;
+            _client = factory.CreateClient();
+            _client.BaseAddress = new Uri("https://cddataexchange.blob.core.windows.net");
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAsync([FromQuery] string from, [FromQuery] string to, [FromQuery] string start)
         {
-            var jsonFile = await HttpClient.GetAsync("/data-exchange/htl-homework/travelPlan.json");
+            var jsonFile = await _client.GetAsync("/data-exchange/htl-homework/travelPlan.json");
             jsonFile.EnsureSuccessStatusCode();
             var responseBody = await jsonFile.Content.ReadAsStringAsync();
             var routes = JsonSerializer.Deserialize<Route[]>(responseBody);
